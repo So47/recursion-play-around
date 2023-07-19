@@ -63,7 +63,13 @@ function maxNumberOfArray(arr, index = 0) {
 
 
 // binary search with recursion; the base case will be an array with one item.
+/*
+The memory and the time complexity are O(log n) due to the recursive function calls that create new stack frames. 
+on the other hand for using a while loop as an iterative solution the time complexity will be O(log n) but the memory consumption will be O(1).
 
+In the iterative binary search implementation, the memory usage remains constant regardless of the size of the input array.
+The algorithm only requires a fixed amount of memory to store variables 
+*/
 function binarySearch(arr, target, low = 0, high = arr.length - 1) {
   if (low > high) {
     return -1; // Base case: target not found

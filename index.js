@@ -19,3 +19,16 @@ function sum(arr, index = 0) {
 }
 const arr = [2, 4, 6]
 console.log(sum(arr))
+
+// rewriting the sum function with tail recursion which is more efficient
+
+function sumB(arr, index =0, sum =0){
+    if(arr.length === index) {
+            // Base case: reached the end of the array
+    return sum;
+    } else {
+        return sumB(arr, index + 1, sum + arr[index])
+    }
+}
+
+

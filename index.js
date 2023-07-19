@@ -61,3 +61,22 @@ function maxNumberOfArray(arr, index = 0) {
     }
 }
 
+
+// binary search with recursion; the base case will be an array with one item.
+
+function binarySearch(arr, target, low = 0, high = arr.length - 1) {
+  if (low > high) {
+    return -1; // Base case: target not found
+  }
+
+  const mid = Math.floor((low + high) / 2);
+
+  if (arr[mid] === target) {
+    return mid; // Base case: target found
+  } else if (arr[mid] > target) {
+    return binarySearch(arr, target, low, mid - 1); // Recursive call for the left half
+  } else {
+    return binarySearch(arr, target, mid + 1, high); // Recursive call for the right half
+  }
+}
+

@@ -31,6 +31,16 @@ function sumB(arr, index =0, sum =0){
     }
 }
 
+// function to count numbers in a list
+function count(arr, index = 0) {
+    if (arr.length === index) {
+        return 0;
+    }
+    else {
+        return 1 + count(arr, index + 1)
+    }
+}
+
 /* In practical terms, for large arrays or deeply nested recursive calls,
  it's generally advisable to use iterative solutions or other techniques
   to avoid potential stack overflow errors in JavaScript.

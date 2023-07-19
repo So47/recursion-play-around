@@ -31,4 +31,19 @@ function sumB(arr, index =0, sum =0){
     }
 }
 
+/* In practical terms, for large arrays or deeply nested recursive calls,
+ it's generally advisable to use iterative solutions or other techniques
+  to avoid potential stack overflow errors in JavaScript.*/
+function maxNumberOfArray(arr, index = 0) {
+    if (arr.length === index + 1) {
+        return arr[index];
+    }
+    else {
+        if (arr[index] > arr[index + 1]) {
+            return arr[index]
+        } else {
+            return maxNumberOfArray(arr, index + 1)
+        }
+    }
+}
 

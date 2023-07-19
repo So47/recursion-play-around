@@ -33,7 +33,11 @@ function sumB(arr, index =0, sum =0){
 
 /* In practical terms, for large arrays or deeply nested recursive calls,
  it's generally advisable to use iterative solutions or other techniques
-  to avoid potential stack overflow errors in JavaScript.*/
+  to avoid potential stack overflow errors in JavaScript.
+   This function below has memory consumption O(n) which is huge. 
+   If we used an iterative solution it will be just O(1).
+   However, the time consumption for both of them is the same.
+  */
 function maxNumberOfArray(arr, index = 0) {
     if (arr.length === index + 1) {
         return arr[index];
